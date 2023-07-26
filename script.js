@@ -30,6 +30,11 @@ const generateTable = () => {
 
 const ExportToExcel = (type, fn, dl) => {
     if (!tableExists) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Table not exist to export!',
+        })
         return
     }
     const elt = table
